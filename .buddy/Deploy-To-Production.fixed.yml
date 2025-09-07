@@ -5,3 +5,12 @@
   events:
   - type: PUSH
   fail_on_prepare_env_warning: true
+  actions:
+  - action: netlify deploy --dir=. --prod
+    type: NETLIFY
+    version: 20
+    site_id: first-project-net
+    integration: netlify
+    execute_commands:
+    - netlify deploy --dir=. --prod
+    shell: BASH
